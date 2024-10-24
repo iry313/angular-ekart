@@ -5,16 +5,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent{
-product={
-name :'Iphone 13',
-price:789,
-color:'Red',
-discount: 8.5
-}
+export class ProductListComponent {
+  product = {
+    name: 'Iphone 13',
+    price: 789,
+    color: 'Red',
+    discount: 8.5,
+    inStock: 10
+  }
 
-getDiscountedPrice(){
- return this.product.price - (this.product.price * this.product.discount / 100)
-}
+  getDiscountedPrice() {
+    return this.product.price - (this.product.price * this.product.discount / 100)
+  }
 
 }
